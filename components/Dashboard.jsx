@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom"; // Import Link from react-router-dom if you're using it for navigation
 import VerticalNavBar from "./VerticalNavBar";
 import { Button } from "./ui/button";
+import BoardDashboard from "./BoardDashboard";
+import Chat from "../src/Chat/Chat";
 
 function Dashboard() {
   return (
@@ -9,7 +11,7 @@ function Dashboard() {
       {/* Sidebar */}
       <VerticalNavBar />
       {/* Main content */}
-      <main className="p-6 sm:p-10 space-y-6">
+      <main className="pl-24 py-6 sm:pl-24 sm:py-6 space-y-6">
         <div className="flex flex-col space-y-6 md:space-y-0 md:flex-row justify-between">
           <div className="mr-6">
             <h1 className="text-4xl font-semibold mb-2">Dashboard</h1>
@@ -51,7 +53,7 @@ function Dashboard() {
             </Button>
           </div>
         </div>
-        <section className="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
+        {/* <section className="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
           <div className="flex items-center p-8 bg-white shadow rounded-lg">
             <div className="inline-flex flex-shrink-0 items-center justify-center h-16 w-16 text-purple-600 bg-purple-100 rounded-full mr-6">
               <svg
@@ -145,17 +147,10 @@ function Dashboard() {
               <span className="block text-gray-500">Finished homeworks</span>
             </div>
           </div>
-        </section>
+        </section> */}
         <section className="grid md:grid-cols-2 xl:grid-cols-4 xl:grid-rows-3 xl:grid-flow-col gap-6">
           <div className="flex flex-col md:col-span-2 md:row-span-2 bg-white shadow rounded-lg">
-            <div className="px-6 py-5 font-semibold border-b border-gray-100">
-              The number of applied and left students per month
-            </div>
-            <div className="p-4 flex-grow">
-              <div className="flex items-center justify-center h-full px-4 py-16 text-gray-400 text-3xl font-semibold bg-gray-100 border-2 border-gray-200 border-dashed rounded-md">
-                Chart
-              </div>
-            </div>
+            <BoardDashboard />
           </div>
           <div className="flex items-center p-8 bg-white shadow rounded-lg">
             <div className="inline-flex flex-shrink-0 items-center justify-center h-16 w-16 text-yellow-600 bg-yellow-100 rounded-full mr-6">
@@ -254,10 +249,11 @@ function Dashboard() {
             <div className="px-6 py-5 font-semibold border-b border-gray-100">
               Students by type of studying
             </div>
-            <div className="p-4 flex-grow">
-              <div className="flex items-center justify-center h-full px-4 py-24 text-gray-400 text-3xl font-semibold bg-gray-100 border-2 border-gray-200 border-dashed rounded-md">
+            <div className="p-4 flex-grow rounded-full">
+              {/* <div className="flex items-center justify-center h-full px-4 py-24 text-gray-400 text-3xl font-semibold bg-gray-100 border-2 border-gray-200 border-dashed rounded-md">
                 Chart
-              </div>
+              </div> */}
+              <Chat className="" />
             </div>
           </div>
         </section>

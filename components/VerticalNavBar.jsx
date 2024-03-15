@@ -6,7 +6,7 @@ import { Button } from "./ui/button";
 const VerticalNavBar = () => {
   return (
     <>
-      <aside className="hidden sm:flex sm:flex-col h-screen">
+      <aside className="hidden sm:flex sm:flex-col h-screen fixed">
         <Link
           to="#"
           className="inline-flex items-center justify-center h-20 w-20 bg-purple-600 hover:bg-purple-500 focus:bg-purple-500"
