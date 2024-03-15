@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom"; // Import Link from react-router-dom if you're using it for navigation
 import VerticalNavBar from "./VerticalNavBar";
+import { Button } from "./ui/button";
 
 function Dashboard() {
   return (
@@ -14,7 +15,7 @@ function Dashboard() {
             <h1 className="text-4xl font-semibold mb-2">Dashboard</h1>
           </div>
           <div className="flex flex-wrap items-start justify-end -mb-3">
-            <button className="inline-flex px-5 py-3 text-purple-600 hover:text-purple-700 focus:text-purple-700 hover:bg-purple-100 focus:bg-purple-100 border border-purple-600 rounded-md mb-3">
+            <Button variant="outline" className="rounded-full" size="lg">
               <svg
                 aria-hidden="true"
                 fill="none"
@@ -29,9 +30,9 @@ function Dashboard() {
                   d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"
                 />
               </svg>
-              Manage dashboard
-            </button>
-            <button className="inline-flex px-5 py-3 text-white bg-purple-600 hover:bg-purple-700 focus:bg-purple-700 rounded-md ml-6 mb-3">
+              Manage room
+            </Button>
+            <Button className="rounded-full" size="lg">
               <svg
                 aria-hidden="true"
                 fill="none"
@@ -46,8 +47,8 @@ function Dashboard() {
                   d="M12 6v6m0 0v6m0-6h6m-6 0H6"
                 />
               </svg>
-              Create new dashboard
-            </button>
+              Create new room
+            </Button>
           </div>
         </div>
         <section className="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
