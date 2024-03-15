@@ -8,6 +8,7 @@ import Home from "./scenes/Home";
 import Dashboard from "../components/Dashboard"
 import Chat from "./Chat/Chat";
 import Footer from "../components/Footer";
+import Board from "./canvas/Board";
 const App = () => {
   return (
     <>
@@ -20,6 +21,7 @@ const App = () => {
           <Route path="/sign-up" element={<SignUpPage />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/chat" element={<Chat />} />
+          <Route path="/board" element={<Board/>} />
         </Routes>
         {/* <Footer /> */}
       </Router>
