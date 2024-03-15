@@ -2,10 +2,10 @@ import React from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import SignInPage from "../components/SignIn";
 import SignUpPage from "../components/SignUp";
-import IndexPage from "../components/IndexPage";
+// import IndexPage from "../components/IndexPage";
 import NavBar from "../components/NavBar";
 import Home from "./scenes/Home";
-import Dashboard from "../components/ui/Dashboard"
+import Dashboard from "../components/Dashboard"
 import Chat from "./Chat/Chat";
 import Footer from "../components/Footer";
 const App = () => {
@@ -13,7 +13,7 @@ const App = () => {
     <>
     {/* <div className="flex h-screen felx-col"> */}
       <Router>
-        <NavBar />
+        {/* <NavBar /> */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/sign-in" element={<SignInPage />} />
@@ -21,7 +21,7 @@ const App = () => {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/chat" element={<Chat />} />
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
       </Router>
       {/* </div> */}
     </>
