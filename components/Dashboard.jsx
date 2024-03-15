@@ -4,6 +4,7 @@ import VerticalNavBar from "./VerticalNavBar";
 import { Button } from "./ui/button";
 import BoardDashboard from "./BoardDashboard";
 import Chat from "../src/Chat/Chat";
+import Drop from "./Drop";
 
 function Dashboard() {
   return (
@@ -13,8 +14,9 @@ function Dashboard() {
       {/* Main content */}
       <main className="pl-24 py-6 sm:pl-24 sm:py-6 space-y-6">
         <div className="flex flex-col space-y-6 md:space-y-0 md:flex-row justify-between">
-          <div className="mr-6">
-            <h1 className="text-4xl font-semibold mb-2">Dashboard</h1>
+          <div className="flex mr-6">
+            <h1 className="text-4xl font-semibold mb-2 mr-3">Dashboard</h1>
+            <Drop />
           </div>
           <div className="flex flex-wrap items-start justify-end -mb-3">
             <Button variant="outline" className="rounded-full" size="lg">
